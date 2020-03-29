@@ -71,6 +71,10 @@
     <!--
     <script src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
     -->
+    {{ if or .Params.math .Site.Params.math }}
+    {{ partial "math.html" . }}
+    {{ end }}
+
     <!-- jQuery -->
     <script src="{{ "js/jquery.min.js" | relURL }}"></script>
     
