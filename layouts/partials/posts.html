@@ -1,4 +1,7 @@
 <div class="container">
+    {{ if or .Params.math .Site.Params.math }}
+    {{ partial "math.html" . }}
+    {{ end }}
     <div class="row">
         <!-- USE SIDEBAR -->
         <!-- Post Container -->
